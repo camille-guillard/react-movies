@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 
 export default class MovieElement extends Component {
 
+    mouseEnter= () => {
+        this.props.updateSelectedMovie(this.props.movie.title)
+    }
+
     render() {
         return (
-            <div className="col-lg-3 col-sm-4 col-sm-6 p-2">
-                <div className="card">
-                    <img alt="film" src="https://fr.web.img6.acsta.net/medias/nmedia/18/36/25/10/19106210.jpg" className="card-img-top"/>
-                    <div className="card-body">
-                        <h5 className="card-title">ROCKY</h5>
-                        <p className="card-text">
-                            23 mars 1977 / 1h 59min / Action, Drame <br/>
-                            Date de reprise 8 septembre 2021 <br/>
-                            De John G. Avildsen <br/>
-                            Avec Sylvester Stallone, Talia Shire, Burt Young <br/>
-                        </p>
+            <div onMouseEnter={ this.mouseEnter } className="col-lg-3 col-sm-4 col-sm-6 p-2">
+                <div className="border d-flex">
+                    <img width="150" height="200" alt="film" src={ this.props.movie.img }/>
+                    <div className="flex-fill d-flex flex-column p-3">
+                        <h5>{ this.props.movie.title }</h5>
+                        <hr className="w-100" />                        
+                        <span>{ this.props.movie.details }</span>
                     </div>
                 </div>
             </div>
