@@ -1,11 +1,12 @@
 import * as axios from 'axios';
+import { token } from '../auth';
 
 const apiMovie = axios.create({
     baseURL: 'https://api.themoviedb.org/4'
 });
 
 apiMovie.interceptors.request.use( req => {
-    req.headers['Authorization'] = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMzJiZmI3YWRiNmJjNzMwZTNkMjZiODVmYThmNjNlZSIsInN1YiI6IjYwNDNhYzhkNTI1OGFlMDAyYTUzOTViMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.CebKRH9PhEmIA02kUjXIbsZCq8RogwixOYhnl665EDw';
+    req.headers['Authorization'] = token;
     return req;
 })
 
