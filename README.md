@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Config
 
-Create a file src/auth.js containing you token obtained from the https://www.themoviedb.org api: 
+Create a file src/auth.js containing you token obtained from the https://www.themoviedb.org api: .\
 export const token = 'Bearer YOURTOKEN';
 
 ## Available Scripts
