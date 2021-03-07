@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Formik } from 'formik';
-import apiMovie, { apiMovieMap } from '../../conf/api.movie';
+import apiMovie, { apiMovieMap } from '../../../../conf/api.movie';
 
 export default class SearchBar extends Component {
 
@@ -30,7 +30,7 @@ export default class SearchBar extends Component {
                             <option value="fr-FR">Français</option>
                             <option value="de-DE">Allemand</option>
                         </select>
-                        <button className="btn btn-small" type="submit" disabled={isSubmitting}>Submit</button>
+                        <button className="btn btn-small btn-primary" type="submit" disabled={isSubmitting}>Submit</button>
                     </form>
                 )}
             </Formik>

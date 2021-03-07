@@ -12,8 +12,8 @@ apiMovie.interceptors.request.use( req => {
 
 export default apiMovie;
 
-
 export const apiMovieMap = m => ({
+    id: m.id,
     title: m.title,
     img: `https://image.tmdb.org/t/p/w500${m.poster_path}`,
     details: `${m.release_date} | ${m.vote_average}/10 | ${m.vote_count}`,
