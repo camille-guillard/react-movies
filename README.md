@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Config
+
+Create a file src/auth.js containing you token obtained from the https://www.themoviedb.org api: 
+export const token = 'Bearer YOURTOKEN';
+
 ## Available Scripts
 
 In the project directory, you can run:
