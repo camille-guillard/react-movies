@@ -107,9 +107,6 @@ class App extends Component {
             } }/>
             <Redirect to="/films" />
           </Switch>
-
-            )
-          }
         </div>
       </BrowserRouter>
     );

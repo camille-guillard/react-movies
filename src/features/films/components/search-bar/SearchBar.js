@@ -4,6 +4,10 @@ import apiMovie, { apiMovieMap } from '../../../../conf/api.movie';
 
 export default class SearchBar extends Component {
 
+    constructor(props) {
+        super(props);
+    }
+
     submit = (values, actions) => {
         const query = '?' + Object.keys(values).map( key => `${ key }=${ values[key ]}&`).join('');
         apiMovie.get('/search/movie' + query)
@@ -13,7 +17,10 @@ export default class SearchBar extends Component {
           this.props.updateMovies(movies);
           actions.setSubmitting(false);
         } )
-        .catch(err => console.log(err));
+        .catch(err => {
+            actions.setSubmitting(false);
+            console.log(err);
+        });
     }
 
     render() {
